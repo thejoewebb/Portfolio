@@ -1,0 +1,235 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+}
+
+body {
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/evo-1.jpg');
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+#main_title {
+    text-align:center;
+}
+
+.content {
+    float: right;
+    width: 60%;
+    padding-left: 3%;
+    padding-right: 3%;
+    /*
+    margin-left: 25px;
+    margin-right: 25px;
+    border-radius: 7px;*/
+}
+
+.profile-image-container {
+    width: 290px;
+    height: 211px;
+    align-items: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+}
+
+
+p a:link {
+    color: rgb(223, 242, 46);
+    text-decoration: none;
+}
+
+p a:visited {
+    color:rgb(242, 170, 46);
+    text-decoration: none;
+}
+
+p a:hover {
+    color: rgb(223, 242, 46);
+    text-decoration: underline;
+}
+
+p a:active {
+    color: chartreuse;
+    text-decoration: underline;
+}
+
+.external table {
+    text-align: center;
+    font-size: small;
+    width: 30%;
+    float: left;
+    border-spacing: 3px;
+    margin-top: 25px;
+}
+
+.external table td {
+    width: 50%;
+}
+
+th,td {
+    border-radius: 5px;
+    background-color: rgba(255, 99, 71, 0.8);
+    padding: 5px;
+    overflow: hidden;
+}
+
+th:hover,td:hover {
+    background-color: rgba(255, 99, 71, 1);
+}
+
+
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #111111;
+}
+
+.horizontal {
+    /*width:100%;
+    overflow:auto;*/
+    display: grid;/*grid/flex/Inline-Block/Float*/
+    grid-template-columns: 33% 33% 33%;
+}
+
+/* Larger screens: vertical stacking */
+.section-aside {
+    display: flex;
+    flex-direction: column;
+    width: 30%; /* Adjust width as needed */
+    margin: 0 1%; /* Centering and spacing */
+}
+
+/* Style individual divs in the aside */
+.section-aside div {
+    text-align: center;
+}
+
+aside {
+    float: left;
+    width: 30%;
+
+}
+
+aside div {
+    /*width:33%;*/  
+    /*float:left;*/
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 1px;
+    /*text-align: center;*/
+    align-items: center;
+    justify-content: center;
+}
+
+aside div:hover {
+    background-color: rgba(0, 0, 0, 1);
+    text-align: center;
+}
+
+aside div a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Clear floats after the columns */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: aliceblue;
+}
+
+/*Responsive Elements*/
+@media (min-width: 600px) {
+    .profile-image-container {
+        border-radius: 105px; /* Half the height */
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .profile-image-container {
+        width: 211px;
+        height: 211px;
+        border-radius: 105px; /* Circular */
+    }
+
+    .profile-image {
+        width: auto; /* Keep the natural aspect ratio */
+        height: 100%; /* Scale image to fill container height */
+        object-fit: cover; /* Crop image to fill container */
+        object-position: center; /* Center the crop */
+    }
+
+    aside {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        width: 100%;
+        height: auto;
+    }
+
+    .section-aside {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        gap: 2px; /* Space between items */
+        width: 100%;
+    }
+
+    .section-aside div {
+        margin: 0; /* Reset margin for grid layout */
+    }
+
+    .content{
+        width: 90%;
+        /*
+        padding: 5px;
+        margin-left:20px;
+        margin-right: 20px;*/
+    }
+
+    .external table {
+        width: 100%;
+    }
+
+}

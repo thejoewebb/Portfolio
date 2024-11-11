@@ -1,0 +1,14 @@
+HTML W3 schools course:
+
+HTML Responsive Web Design
+
+<Javascript>
+
+document.getElementByID("")
+document.getElementByClass("")
+
+.innerHTML
+.style
+
+<script>defines Javascript Function</script>
+<noscript>defines output when JS disabled</noscript>
